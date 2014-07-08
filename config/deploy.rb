@@ -43,13 +43,4 @@ namespace :deploy do
 
   after :finishing, 'deploy:cleanup'
 
-  desc 'Provision env before assets:precompile'
-  task :fix_bug_env do
-    set :rails_env, (fetch(:rails_env) || fetch(:stage))
-  end
-
-  before 'deploy:assets:precompile', 'deploy:fix_bug_env'
-  before 'deploy:migrate', 'deploy:fix_bug_env'
-
-
 end

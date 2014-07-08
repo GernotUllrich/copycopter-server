@@ -12,6 +12,7 @@ gem 'rails', '3.2.11'
 gem 'thin', '1.3.1'
 gem 'yajl-ruby', '1.1.0', :require => 'yajl'
 gem 'jquery-rails', '>= 1.0.3'
+gem 'Platform', '~> 0.4.0'
 
 group :assets do
   gem 'sass-rails', "~> 3.2.5"
@@ -21,11 +22,11 @@ group :assets do
 end
 
 # Deploy with Capistrano
-gem 'capistrano', '~> 3.0'
-gem 'capistrano-ext'
-gem 'capistrano-rails'
-gem 'capistrano-bundler'
-gem 'capistrano-rvm', '~> 0.0.3'
+gem 'capistrano', '3.0.1'
+gem 'capistrano-ext', '1.2.1'
+gem 'capistrano-rails', '1.1.0'
+gem 'capistrano-bundler', '1.0.0'
+gem 'capistrano-rvm', '0.0.3'
 
 group :development, :test do
   gem 'foreman', '0.40.0'
