@@ -1,5 +1,5 @@
 set :application, 'copycopter'
-set :repo_url, 'git@github.com:GernotUllrich/copycopter-server.git'
+set :repo_url, 'https://github.com/GernotUllrich/copycopter-server.git'
 
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
