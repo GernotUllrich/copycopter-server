@@ -34,3 +34,14 @@
     <% end -%>
   <% end %>
 <% end -%>
+
+<h3>Existing Translations</h3>
+<ul>
+  <% @localization.alternates.each do |localization| %>
+  <li>
+    <%= "<pre>#{link_to "<span style=\"color:white;\">edit #{localization.locale.key}</span>".html_safe, new_localization_version_path(localization)} - #{localization.published_content.blank? ? localization.draft_content : localization.published_content}</pre>".html_safe %>
+  </li>
+  <% end %>
+</ul>
+
+

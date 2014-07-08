@@ -30,6 +30,7 @@ $.fn.incrementalSearch = (options) ->
 
   search = (query) =>
     timeout = null
+    $.cookie("copycopter_search", query);
     $(options.noResults).hide()
     if query is ""
       $(options.viewAll).show()
@@ -54,7 +55,9 @@ $.fn.incrementalSearch = (options) ->
     $(options.blankSlate).slideUp()
     $(options.searchContainter).removeClass "start", "fast"
 
+  $(options.queryInput).val($.cookie("copycopter_search"));
   $(options.queryInput).focus removeStart
+  $(options.queryInput).keyup();
   $(options.viewAll).click ->
     $(this).hide()
     renderResults()
